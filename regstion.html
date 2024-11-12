@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'poppins',sans-serif;
+        }
+        body{
+            display: flex;
+            height: 100vh;
+            background-color: aliceblue;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .container{
+            max-width: 700px;
+            width: 100%;
+            height: 550px;
+            background-color: white;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 25px;
+            border-radius: 10px;
+        }
+        .container .title{
+            position: relative;
+            font-weight: 500;
+            font-size: 25px;
+        }
+        .container .title::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height:3px;
+            width: 30px;
+            background-color: blue;
+        }
+        .container form .user-details{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0 12px 0;
+        }
+         .user-details .input-box{
+            margin-bottom: 15px;
+            width: calc(100%/2 - 20px);
+        }
+        .user-details .input-box .details{
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .user-details .input-box input{
+            width: 100%;
+            padding: 7px;
+            border-radius: 5px;
+            outline: none;
+            font-size: medium;
+             border-bottom-width: 2px;
+            font-family: sans-serif;
+            transition: all 0.3s ease;
+        }
+        .user-details .input-box input:focus,
+        .user-details .input-box .input{
+            border-color: blue;
+        }
+        .category{
+            display: flex;
+           width: 97%;
+           justify-content: space-between;
+           margin: 14px 0;
+        }
+        .gender-details .category label{
+            display: flex;
+            justify-content: center;
+        }
+        input[type="radio"]{
+            display: none;
+        }
+        .gender-details .category .dot{
+            width: 15px;
+            height: 15px;
+            border: 1px solid black;
+            border-radius: 50%;
+            margin-right:30px;
+
+        }
+        #dot-1:checked ~ .category label .one,
+        #dot-2:checked ~ .category label .two,
+        #dot-3:checked ~ .category label .three{
+            border-color: white;
+            background-color: black;
+        }
+        .sub-btn ,button{
+                /* width: 300px; */
+    background-color: yellow;
+    justify-content: center;
+    /* align-items: center; */
+    display: flex;
+    height: 39px;
+    align-items: center;
+    outline: 1px solid black;
+
+        }
+        button[type="input"]{
+            display: none;
+        }
+        .text1{
+            width: 300px;
+    margin-top: 32px;
+   
+    position: absolute;
+   
+    right: 702px;
+    font-weight: bold;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="title">Register</div>    
+    <form>
+        <div class="user-details">
+
+            <div class="input-box">
+                <div class="details">First Name</div>
+                <input type="text" name="name" readonly="">
+            </div>
+            <div class="input-box">
+                <div class="details">First Name</div>
+                <input type="text" name="name" readonly="">
+            </div>
+            <div class="input-box">
+                <div class="details">First Name</div>
+                <input type="text" name="name" readonly="">
+            </div>
+            <div class="input-box">
+                <div class="details">First Name</div>
+                <input type="text" name="name" readonly="">
+            </div>
+            <div class="input-box">
+                <div class="details">First Name</div>
+                <input type="text" name="name" readonly="">
+            </div>
+            <div class="input-box">
+                <div class="details">First Name</div>
+                <input type="text" name="name" readonly="">
+            </div>
+            <div class="input-box">
+                <div class="details">First Name</div>
+                <input type="text" name="name" readonly="">
+            </div>
+            <div class="input-box">
+                <div class="details">First Name</div>
+                <input type="text" name="name" readonly="">
+            </div>
+        </div>
+        <div class="gender-details">
+         <input type="radio" name="gender" id="dot-1">
+         <input type="radio" name="gender" id="dot-2">
+         <input type="radio" name="gender" id="dot-3">
+         <span class="gender-title">Gender</span>   
+         <div class="category">
+         <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+         </label>   
+         <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Fmale</span>
+         </label>   
+         <label for="dot-3">
+            <span class="dot three"></span>    
+            <span class="gender">Other</span>
+         </label>   
+         </div>
+        </div>
+         <div class="sub-btn"><button type="submit">Register</button></div>
+         <div class="text1">If you dont please cheack your account</div>
+    </form>
+    </div>
+</body>
+</html>

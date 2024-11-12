@@ -1,0 +1,93 @@
+body{
+    width: auto;
+    background-image: url(amareshj.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    min-width: auto;
+}
+.container .first{
+    width: 70%;
+    position: fixed;
+    left: 260px;
+    /* margin: 2%; */
+    background: antiquewhite;
+    top: 2%;
+    height: 560px;
+    opacity: 0.7;
+}
+.container .first .login{
+    display: flex;
+    background: white;
+    margin: 3%;
+    justify-content: center;
+    height: 490px;
+    outline: 1px solid black;
+
+}
+.first .login .horizntal{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    line-height: 80%;
+    outline: 1px solid black;
+    height: 59px;
+}
+.first .login h1{
+    display: flex;
+    padding: 1px;
+    margin: 1px;
+    outline: 1px solid black;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+}
+.first .login .form-content{
+    position: absolute;
+    left: 382px;
+    width: 200px;
+    height: 40px;
+    top: 120px;
+    margin: 10px;
+}
+.first .login .form-content .label-text{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+}
+.first .login .form-content .text-name{
+    left: 196px;
+    display: grid;
+    position: relative;
+    top: -37px;
+    max-width: 200px;
+    height: 30px;
+    margin: 10px;
+
+}
+.first .login .form-content .button-class{
+    width: 100px;
+    height: 40px;
+    display: flex;
+    position: absolute;
+    background: aqua;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid black;
+}
+.first .login .form-content .text-name1{
+    left: 820px;
+    display: flex;
+    /* position: absolute; */
+    position: fixed;
+    margin-top: 56px;
+    font-weight: bold;
+}
+.first .login .form-content input{
+    width: 300px;
+    height: 40px;
+    background-color: white;
+}

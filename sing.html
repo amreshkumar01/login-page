@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Ludiflex</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+     <div class="box">
+        <!-------Login Box------>
+        <div class="box-login" id="login">
+            <div class="top-header">
+                <h3>Hello, Again</h3>
+                <small>We are happy to have you back.</small>
+            </div>
+            <div class="input-group">
+                <div class="input-field">
+                    <input type="text" class="input-box" id="logEmail" required>
+                    <label for="logEmail">Email address</label>
+
+                </div>
+                <div class="input-field">
+                    <input type="password" class="input-box" id="logpassword" required>
+                    <label for="logpassword">Password</label>
+                    <div class="eye-area">
+                     <div class="eye-box" onclick="myLogpassword()">
+                        <i class="fa-regular fa-eye"></i>
+                        <i class="fa-regular fa-eye-slash" id="eye-slash"></i>
+                     </div>   
+                    </div>
+                </div>
+                <div class="remember">
+                    <input type="checkbox" id="formcheack" class="check">
+                    <label for="formcheack">Remember me</label>
+                </div>
+                <div class="input-field">
+                    <input class="input-submit"   type="submit"  value="sign In">
+                    
+                
+                </div>
+                <div class="forgot">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </div>
+        </div>
+        <!----Register------>
+
+        <div class="box-register" id="register">
+            <div class="top-header">
+                <h3>Sign Up,Now</h3>
+                <small>We are happy to have you back.</small>
+            </div>
+            <div class="input-group">
+                <div class="input-field">
+                     
+                    <input type="text" class="input-box" id="regUser" required>
+                    <label for="regUser">Username</label>
+
+                </div>
+                <div class="input-field">
+                    <input type="text" class="input-box" id="logEmail" required>
+                    <label for="logEmail">Email address</label>
+
+                </div>
+                <div class="input-field">
+                    <input type="password" class="input-box" id="regpassword" required>
+                    <label for="regpassword">Password</label>
+                    <div class="eye-area">
+                     <div class="eye-box" onclick="myRegpassword()">
+                        <i class="fa-regular fa-eye" id="eye-2"></i>
+                        <i class="fa-regular fa-eye-slash" id="eye-slash-2"></i>
+                     </div>   
+                    </div>
+                </div>
+                <div class="remember">
+                    <input type="checkbox" id="formcheack-2" class="check">
+                    <label for="formcheack-2">Remember me</label>
+                </div>
+                <div class="input-field">
+                    <input type="submit" class="input-submit" value="sign In">
+                </div>
+                 
+            </div>
+        </div>
+        <!------Switch--------->
+
+        <div class="switch">
+            <a href="#" class="login" onclick="login()">Login</a>
+            <a href="#" class="register" onclick="register()">Register</a>
+            <div class="btn-active" id="btn"></div>
+            
+        </div>
+     </div>   
+    </div>
+    <script type="text/javascript">
+        var x = document.getElementById('login');
+        var y = document.getElementById('register');
+        var z = document.getElementById('btn');
+       
+        function login(){
+            x.style.left = "27px";
+            y.style.right = "-350px";
+            z.style.left = "0px";
+        }
+        function register(){
+            x.style.left = "-350px";
+            y.style.right = "25px";
+            z.style.left = "150px";
+        }
+        function myLogpassword(){
+            var a = document.getElementById('logpassword');
+            var b = document.getElementById('eye');
+            var c = document.getElementById('eye-slash');
+
+            if(a.type== "password"){
+             a.type = "text"
+             b.style.opacity = "0";
+             c.style.opacity="1";
+
+            }else{
+                a.type = "password";
+                b.style.opacity = "1";
+                c.style.opacity = "0";
+            }
+        }
+
+        function myRegpassword(){
+            var d = document.getElementById('regpassword');
+            var b = document.getElementById('eye-2');
+            var c = document.getElementById('eye-slash-2');
+
+            if(d.type== "password"){
+             d.type = "text"
+             b.style.opacity = "0";
+             c.style.opacity="1";
+
+            }else{
+                d.type = "password";
+                b.style.opacity = "1";
+                c.style.opacity = "0";
+            }
+        }
+    </script>
+</body>
+</html>
